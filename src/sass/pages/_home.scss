@@ -1,3 +1,33 @@
 /* ********* */
 /* @HOME */
 /* ********* */
+
+.contenedor{
+    background-color: map-get($colores, fondo);
+}
+
+$contador: 1;
+@each $key, $color in $colores {
+
+    .polaroid#{$contador}{
+        height: 200px;
+        width: 200px;
+        background-color: $color;
+        border: 10px solid white;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        &:hover{
+            background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.O4n6neBjoHbJj7mVxjLrZQHaEK%26pid%3DApi&f=1');
+        }
+
+        figcaption{
+            background-color: white;
+            padding: 5px 0;
+            text-align: center;
+        }
+    }
+    $contador: $contador + 1;       
+}

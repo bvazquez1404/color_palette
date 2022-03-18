@@ -1,3 +1,15 @@
 /* ********* */
 /* @GRID*/
 /* ********* */
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, auto);
+
+    justify-items: center;
+}
+
+.titulo{
+    grid-column: 1/4;
+}
